@@ -12,6 +12,7 @@ struct SurgeonCommand
 class SurgeonConsole
 {
 public:
+	void start();
 	void pollInput();
 	//void sendCommandToPlanner(SurgeonCommand cmd);
 	SurgeonCommand getNextCommand();

@@ -13,7 +13,8 @@ int main()
 	MotionPlanner planner;
 	SurgeonConsole console;
 
-	console.pollInput();
+	//console.pollInput();
+	console.start();
 
 	auto controlThread = std::thread(
 		[&]()
