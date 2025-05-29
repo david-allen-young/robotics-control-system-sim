@@ -1,16 +1,21 @@
 #pragma once
+#include "Pose.h"
+#include "ThreadSafeQueue.h"
 #include <thread>
 
 struct SurgeonCommand
 {
-	// TODO
+	Pose target;
+	// TODO: other members
 };
 
 class SurgeonConsole
 {
 public:
 	void pollInput();
-	void sendCommandToPlanner(SurgeonCommand cmd);
+	//void sendCommandToPlanner(SurgeonCommand cmd);
+	SurgeonCommand getNextCommand();
 private:
+	ThreadSafeQueue<SurgeonCommand> commandQueue;
 	std::thread pollingThread;
 };

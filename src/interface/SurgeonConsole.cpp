@@ -6,8 +6,15 @@ void SurgeonConsole::pollInput()
 	// TODO
 }
 
+//// currently stubbed
+//void SurgeonConsole::sendCommandToPlanner(SurgeonCommand cmd)
+//{
+//	// TODO
+//}
+
 // currently stubbed
-void SurgeonConsole::sendCommandToPlanner(SurgeonCommand cmd)
+SurgeonCommand SurgeonConsole::getNextCommand()
 {
 	// TODO
+	return {};
 }
