@@ -1,0 +1,6 @@
+add_subdirectory(common)
+add_subdirectory(control)
+add_subdirectory(hardware)
+add_subdirectory(interface)
+add_subdirectory(system)
+add_subdirectory(vision)
