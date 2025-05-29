@@ -7,3 +7,8 @@ target_include_directories(interface
 	PUBLIC
 		${PROJECT_SOURCE_DIR}/include/interface
 )
+
+target_link_libraries(interface
+	PUBLIC
+		common
+)
