@@ -13,7 +13,9 @@ int main()
 	MotionPlanner planner;
 	SurgeonConsole console;
 
-	auto T1 = std::thread(
+	console.pollInput();
+
+	auto controlThread = std::thread(
 		[&]()
 		{
 			while (true)
@@ -30,8 +32,8 @@ int main()
 		}
 	);
 
-	scheduler.bindThread(T1, 0, 90);
-	console.pollInput();
+	scheduler.bindThread(controlThread, 0, 90);
+	controlThread.join();
 
 	return 0;
 }
