@@ -18,11 +18,14 @@ int main()
 		{
 			while (true)
 			{
-				Pose target = console.getNextCommand();
+				//Pose target = console.getNextCommand();
+				SurgeonCommand cmd = console.getNextCommand();
+				Pose target = cmd.target;
 				auto trajectory = planner.planTrajectory(target);
 				auto current = driver.readJointAngles();
 				auto control = pid.update(trajectory[0], current[0]);
-				driver.sendJointTargets({control});
+				std::vector<double> angles = { control };
+				driver.sendJointTargets(angles);
 			}
 		}
 	);
