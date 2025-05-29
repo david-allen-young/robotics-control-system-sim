@@ -1,13 +1,13 @@
 #include "FeatureTracker.h"
 
 // currently stubbed
-void run()
+void FeatureTracker::run()
 {
 	// TODO
 }
 
 // currently stubbed
-Pose estimateTissuePose()
+Pose FeatureTracker::estimateTissuePose()
 {
 	// TODO
 	return {}; // temp
