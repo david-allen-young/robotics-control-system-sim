@@ -1,7 +1,34 @@
-// TODO #includes
+#include "RealTimeScheduler.h"
+#include "ArmDriver.h"
+#include "PIDController.h"
+#include "MotionPlanner.h"
+#include "SurgeonConsole.h"
+#include <thread>
 
-// executable stub
 int main()
 {
+	RealtimeScheduler scheduler;
+	ArmDriver driver;
+	PIDController pid;
+	MotionPlanner planner;
+	SurgeonConsole console;
+
+	auto T1 = std::thread(
+		[&]()
+		{
+			while (true)
+			{
+				Pose target = console.getNextCommand();
+				auto trajectory = planner.planTrajectory(target);
+				auto current = driver.readJointAngles();
+				auto control = pid.update(trajectory[0], current[0]);
+				driver.sendJointTargets({control});
+			}
+		}
+	);
+
+	scheduler.bindThread(T1, 0, 90);
+	console.pollInput();
+
 	return 0;
 }
