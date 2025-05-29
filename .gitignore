@@ -29,6 +29,9 @@ launch/launch_robot
 *.VC.opendb
 *.log
 
+# === Visual Studio metadata ===
+.vs/
+
 # === Windows ===
 Thumbs.db
 Desktop.ini
