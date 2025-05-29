@@ -25,6 +25,10 @@ int main()
 				Pose target = cmd.target;
 				auto trajectory = planner.planTrajectory(target);
 				auto current = driver.readJointAngles();
+				if (trajectory.empty() || current.empty())
+				{
+					continue;
+				}
 				auto control = pid.update(trajectory[0], current[0]);
 				std::vector<double> angles = { control };
 				driver.sendJointTargets(angles);
