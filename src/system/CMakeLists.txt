@@ -1,6 +1,6 @@
 add_library(system STATIC
 	Logger.cpp
-	RealTimeScheduler.cpp
+	RealtimeScheduler.cpp
 	Watchdog.cpp
 )
 
