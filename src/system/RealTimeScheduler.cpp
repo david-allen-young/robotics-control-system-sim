@@ -1,4 +1,4 @@
-#include "RealTimeScheduler.h"
+#include "RealtimeScheduler.h"
 
 // currently stubbed
 void RealtimeScheduler::bindThread(std::thread& t, int cpu, int priority)
