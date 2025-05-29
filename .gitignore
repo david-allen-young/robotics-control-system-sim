@@ -1,12 +1,38 @@
-CMakeLists.txt.user
+# === CMake build artifacts ===
 CMakeCache.txt
-CMakeFiles
-CMakeScripts
-Testing
-Makefile
+CMakeFiles/
 cmake_install.cmake
-install_manifest.txt
-compile_commands.json
-CTestTestfile.cmake
-_deps
-CMakeUserPresets.json
+Makefile
+cmake-build-*/
+build/
+out/
+
+# === Build output ===
+*.obj
+*.o
+*.exe
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.pdb
+*.idb
+
+# === Launch executable ===
+launch/launch_robot
+
+# === Visual Studio files ===
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+*.log
+
+# === Windows ===
+Thumbs.db
+Desktop.ini
+
+# === Git conflict or patch artifacts ===
+*.orig
+*.rej
