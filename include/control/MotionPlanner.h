@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 
+// currently stubbed
 struct Pose
 {
 	// TODO
