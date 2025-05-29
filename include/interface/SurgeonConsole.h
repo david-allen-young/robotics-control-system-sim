@@ -1,6 +1,11 @@
 #pragma once
 #include <thread>
 
+struct SurgeonCommand
+{
+	// TODO
+};
+
 class SurgeonConsole
 {
 public:
