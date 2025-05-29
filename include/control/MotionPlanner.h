@@ -1,11 +1,6 @@
 #pragma once
+#include "Pose.h"
 #include <vector>
-
-// currently stubbed
-struct Pose
-{
-	// TODO
-};
 
 class MotionPlanner
 {
