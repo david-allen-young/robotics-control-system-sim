@@ -16,6 +16,7 @@ void SurgeonConsole::pollInput()
 
 void SurgeonConsole::start()
 {
+	std::cout << "[Console] starting polling thread." << std::endl;
 	pollingThread = std::thread(&SurgeonConsole::pollInput, this);
 }
 
