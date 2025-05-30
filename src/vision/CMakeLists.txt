@@ -7,3 +7,8 @@ target_include_directories(vision
 	PUBLIC
 		${PROJECT_SOURCE_DIR}/include/vision
 )
+
+target_link_libraries(vision
+	PUBLIC
+		common	
+)

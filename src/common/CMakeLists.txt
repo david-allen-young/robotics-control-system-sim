@@ -1,6 +1,5 @@
 add_library(common STATIC
 	Pose.cpp
-	ThreadSafeQueue.cpp
 	Types.cpp
 )
 
