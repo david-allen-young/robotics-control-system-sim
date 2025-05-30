@@ -14,7 +14,6 @@ class SurgeonConsole
 public:
 	void start();
 	void pollInput();
-	//void sendCommandToPlanner(SurgeonCommand cmd);
 	SurgeonCommand getNextCommand();
 private:
 	ThreadSafeQueue<SurgeonCommand> commandQueue;

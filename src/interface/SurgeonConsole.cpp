@@ -14,12 +14,6 @@ void SurgeonConsole::pollInput()
 	}
 }
 
-//// currently stubbed
-//void SurgeonConsole::sendCommandToPlanner(SurgeonCommand cmd)
-//{
-//	// TODO
-//}
-
 void SurgeonConsole::start()
 {
 	pollingThread = std::thread(&SurgeonConsole::pollInput, this);
