@@ -14,7 +14,6 @@ int main()
 	MotionPlanner planner;
 	SurgeonConsole console;
 
-	//console.pollInput();
 	console.start();
 
 	auto controlThread = std::thread(
@@ -22,7 +21,6 @@ int main()
 		{
 			while (true)
 			{
-				//Pose target = console.getNextCommand();
 				SurgeonCommand cmd = console.getNextCommand();
 				Pose target = cmd.target;
 				auto trajectory = planner.planTrajectory(target);
