@@ -49,7 +49,3 @@ To run:
 - File and console-based logger system
 - Optional OpenCV-based vision tracking
 - Test suite using Catch2 or Google Test
-
-## License
-
-[MIT](LICENSE)
